@@ -30,9 +30,9 @@ Gibbs sampling is used to find the most likely coordinates of the 3 cylinders fr
 * **Sampling Stability:** Attempting Gibbs sampling on all variables (coordinates, alpha, beta, offset) simultaneously is very unstable and fails to converge. 
 * **Parameter Tuning:** Simulated data is used to estimate `beta` to avoid having to sample for it, which dictates how stretched out the forward signal is in the vertical direction. 
 * **Impact of Alpha:** Using a large `alpha` (e.g., set to 1) is critical to stabilize the process; if `alpha` is too small, the effect of the cylinders' coordinates mixes with noise. A larger `alpha` amplifies the signal involving the cylinders, helping to match it with real measured data.
+* **Results:** By setting a large `alpha` and a `beta` of 1.40, the shape of the calculated solution fit the real data much better than lower `beta` values, yielding final coordinates that were quite near to the true solution.
 
 ## Order to read this report:
 1. Read `MY_REPORT.html` or `MY_REPORT.pdf` 
 2. Read `Present.mlx`
 3. Read other `*.m` files
-* **Results:** By setting a large `alpha` and a `beta` of 1.40, the shape of the calculated solution fit the real data much better than lower `beta` values, yielding final coordinates that were quite near to the true solution.
